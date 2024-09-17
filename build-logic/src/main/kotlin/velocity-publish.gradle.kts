@@ -8,11 +8,8 @@ extensions.configure<PublishingExtension> {
         maven {
             credentials(PasswordCredentials::class.java)
 
-            name = "paper"
-            val base = "https://repo.papermc.io/repository/maven"
-            val releasesRepoUrl = "$base-releases/"
-            val snapshotsRepoUrl = "$base-snapshots/"
-            setUrl(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
+            name = "StaticStudios"
+            setUrl("https://repo.staticstudios.net/private/")
         }
     }
     publications {
